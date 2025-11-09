@@ -6,6 +6,7 @@ import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalC
 import Layout from "./components/Layout.tsx";
 import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
+import Counter from "./components/Counter.tsx";
 
 function App() {
 
@@ -14,8 +15,8 @@ function App() {
 
         <Layout>
 
+<Counter/>
            <ClassComponentWithState/>
-
             <FunctionalComponentWithState/>
             <FunctionalComponent/>
         <ClassComponent/>
