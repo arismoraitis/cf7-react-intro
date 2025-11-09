@@ -3,11 +3,21 @@ import FunctionalComponent from "./components/FunctionalComponent.tsx";
 import ArrowFunctionalComponent from "./components/ArrowFunctionalComponent.tsx";
 import ArrowFunctionalComponentWithProps from "./components/ArrowFunctionalComponentWithProps.tsx";
 import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
+import Layout from "./components/Layout.tsx";
+import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
+import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 
 function App() {
 
   return (
     <>
+
+        <Layout>
+
+           <ClassComponentWithState/>
+
+            <FunctionalComponentWithState/>
+            <FunctionalComponent/>
         <ClassComponent/>
         <FunctionalComponent/>
         <ArrowFunctionalComponent/>
@@ -16,7 +26,7 @@ function App() {
             title="Is a Arrow Component with Props!"
             description="This is a description."
         />
-
+        </Layout>
     </>
   )
 }
