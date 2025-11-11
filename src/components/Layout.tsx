@@ -1,5 +1,7 @@
-import Header from "./Header.tsx";
+// import Header from "./Header.tsx";
+import React from "react";
 import Footer from "./Footer";
+import HeaderResponsive from "./HeaderResponsive.tsx";
 
 interface  LayoutProps {
 
@@ -11,7 +13,8 @@ const Layout = ({children}: LayoutProps) => {
 
     return (
      <>
-         <Header />
+         {/*<Header />*/}
+         <HeaderResponsive/>
          <div className="container mx-auto min-h-[100vh] pt-24">
 
              {children}

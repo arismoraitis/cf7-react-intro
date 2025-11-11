@@ -13,14 +13,32 @@ import Layout from "./components/Layout.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
-import OnlineStatus from "./components/OnlineStatus.tsx";
+// import OnlineStatus from "./components/OnlineStatus.tsx";
+import {BrowserRouter, Routes, Route} from "react-router";
+import HomePage from "./pages/HomePage.tsx";
+import NameChangerPage from "./pages/NameChangerPage.tsx";
+import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 
 function App() {
 
   return (
     <>
+<BrowserRouter>
+    <Layout>
+        <Routes>
 
-        <Layout>
+
+        <Route path="/" element={ <HomePage/> } />
+
+
+            <Route path="examples">
+        <Route path="/name-changer" element={ <NameChangerPage/> } />
+        <Route path="/online-status" element={ <OnlineStatusPage/> } />
+</Route>
+
+    </Routes>
+             </Layout>
+</BrowserRouter>
 
 {/*<NameChanger/>*/}
 
@@ -45,8 +63,7 @@ function App() {
 {/*            description="This is a description."*/}
 {/*        />*/}
 
-            <OnlineStatus/>
-        </Layout>
+        {/*    <OnlineStatus/>*/}
     </>
   )
 }
