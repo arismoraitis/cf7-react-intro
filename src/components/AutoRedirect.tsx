@@ -8,7 +8,7 @@ const navigate = useNavigate();
 
     useEffect(() => {
         const timer: number = setTimeout (()=> {
-            navigate ("/examples");
+            navigate ("/examples/name-changer");
         }, 5000);
         return () => clearTimeout(timer);
     }, []);

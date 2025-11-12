@@ -27,6 +27,11 @@ const ExamplesSection = () => {
             className={({isActive}) => isActive ? "text-scope-red underline underline-offset-6" : "text-scope-dark-gray"}
         >
             Online Status</NavLink></li>
+        <li> <NavLink
+            to="/examples/auto-redirect-advanced"
+            className={({isActive}) => isActive ? "text-scope-red underline underline-offset-6" : "text-scope-dark-gray"}
+        >
+            Auto Redirect</NavLink></li>
     </ul>
 </div>
 
