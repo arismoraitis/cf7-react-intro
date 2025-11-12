@@ -20,6 +20,8 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import ExamplesPage from "./pages/ExamplesPage.tsx";
+import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 
 function App() {
 
@@ -31,12 +33,18 @@ function App() {
 <Route element={<RouterLayout />}>
     <Route index element={ <HomePage/> }/>
 </Route>
-            <Route path="examples?">
-        <Route path="name-changer" element={ <NameChangerPage/> } />
+
+            {/* ΚΑΙ ΑΥΤΟ ΕΙΝΑΙ ΣΩΣΤΟ <Route path="examples" element={<RouterExamplesLayout/>} >*/}
+            <Route element={<RouterExamplesLayout/>}>
+            <Route path="examples">
+                <Route index element={<ExamplesPage/>} />
+                <Route path="name-changer" element={ <NameChangerPage/> } />
         <Route path="online-status" element={ <OnlineStatusPage/> } />
-        <Route path="users/:userId" element={<UserPage/> } />
 </Route>
-    </Routes>
+</Route>
+
+            <Route path="users/:userId" element={<UserPage/> } />
+        </Routes>
              {/*</Layout>*/}
 </BrowserRouter>
 
